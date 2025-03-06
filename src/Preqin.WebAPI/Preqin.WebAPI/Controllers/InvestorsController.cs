@@ -26,14 +26,7 @@ namespace Preqin.WebAPI.Controllers
             return Ok(investors);
         }
 
-        [HttpGet("{id}")]
-        public async Task<IActionResult> GetInvestorDetails(int id, [FromQuery] string assetClass)
-        {
-            var investorDetails = await _investorService.GetInvestorDetailsAsync(id, assetClass);
-            if (investorDetails == null) return NotFound();
-
-            return Ok(investorDetails);
-        }
+        
     }
     
 }
